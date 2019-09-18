@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<img src="img/xm.jpg" alt="">
+	<div>good morning!!</div>
+
+	<script>
+		var img = document.querySelector('img');
+		var div = document.querySelector('div');
+
+		var date = new Date();
+		var h = date.getHours();
+
+		if(h<12) {
+			div.innerHTML = 'good morning!!!';
+			img.src = 'img/xm.jpg';
+		} else if (h<18) {
+			div.innerHTML = 'good afternoon!!!';
+			img.src = 'img/xm01.jpg';
+		} else {
+			div.innerHTML = 'good eveing!!!';
+			img.src = 'img/xm.jpg';
+		}
+	</script>
+</body>
+</html>

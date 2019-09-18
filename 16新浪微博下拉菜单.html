@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		ul {
+			text-align: center;	
+			width: 100px;
+			line-height: 30px;
+			list-style: none;
+			background: #ccc;
+			margin: auto;
+		}
+		#ul {
+			position: absolute;
+			display: none;
+		}
+		ul li {
+			position: relative;
+		}
+		#ul li a{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<a href="">首页</a>
+			<ul id="ul">
+				<li><a href="">视频</a></li>
+				<li><a href="">发现</a></li>
+				<li><a href="">游戏</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script>
+		var ul = document.querySelector('#ul');
+		var li = ul.parentNode;
+		li.onmousemove = function() {
+			ul.style.display = 'block';
+		}
+		li.onmouseout = function() {
+			ul.style.display = 'none';
+		}
+	</script>
+</body>
+</html>

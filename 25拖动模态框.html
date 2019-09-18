@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style>
+		body {
+			position: relative;
+			background: #ccc
+		}
+		h1{
+			margin:5px auto;
+			width: 300px;
+			font-weight: normal;
+			z-index: 0
+		}
+		h3 {
+			cursor: move;
+		}
+		.login {
+			width: 500px;
+			height: 200px;
+			background: #fff;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,50%);
+			display: none;
+		}
+		.login input {
+			width: 200px;
+			line-height: 20px;
+			padding-left: 5px;
+			margin-bottom: 10px;
+			outline: none;
+		}
+		.login input[type=text]{
+			margin-right: -14px
+		}
+		button {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			background: #fff;
+			border-radius: 50%;
+			border: none;
+			top: -20px;
+			right: -20px;
+			outline: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>点击，弹出登陆框</h1>
+	<div class="login">
+		<h3>登录会员</h3>
+		<form action="">
+			<label for="">用户名： </label><input type="text" placeholder="请输入用户名"><br>
+			<label for="">登录密码：</label><input type="password" placeholder="请输入登陆密码">
+			<button>关闭</button>
+		</form>
+	</div>
+	<script>
+		var alert = document.querySelector('h1');
+		var login = document.querySelector('.login');
+		var btn = document.querySelector('button');
+		var mdown =document.querySelector('h3');
+		alert.addEventListener('click', function(){
+			login.style.display = 'block';
+		});
+		btn.addEventListener('click',function(){
+			login.display.block = 'none';
+		});
+
+		mdown.addEventListener('mousedown', function(e){
+			var x = e.pageX - login.offsetLeft;
+			var y = e.pageY - login.offsetTop;
+			document.addEventListener('mousemove',move);
+			function move(e){
+				var px = e.pageX - x;
+				var py = e.pageY - y;
+				login.style.left = px  + 'px';
+				login.style.top = py +'px';
+ 			}
+ 			document.addEventListener('mouseup',function(){
+ 				document.removeEventListener('mousemove',move);
+ 			});
+		});
+	</script>
+</body>
+</html>

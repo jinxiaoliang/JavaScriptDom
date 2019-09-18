@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0
+		}
+		body {
+			background: url("img/xm.jpg");
+		}
+		.change {
+			width: 750px;
+			height: 100px;
+			background-color: #fff;
+			margin: 100px auto;
+		}
+		img {
+			width: 100px;
+			height: 70px;
+			padding: 14px 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="change">
+		<img src="img/xm.jpg" alt="">
+		<img src="img/xm01.jpg" alt="">
+		<img src="img/xm02.jpg" alt="">
+		<img src="img/xm03.jpg" alt="">
+		<img src="img/xm04.jpg" alt="">
+		<img src="img/xm05.jpg" alt="">
+	</div>
+	<script>
+		var img = document.querySelector('.change').querySelectorAll('img');
+		var bo = document.body;
+		for(var i = 0; i < img.length; i++){
+			img[i].onclick = function() {
+				bo.style.background = 'url('+this.src+')';
+			}
+		}
+	</script>
+</body>
+</html>

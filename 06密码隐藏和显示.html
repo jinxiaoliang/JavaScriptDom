@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input {
+			width: 300px;
+			border: none;
+			outline: none;
+			line-height: 30px;
+			border-bottom: 1px solid #000
+
+		}
+	</style>
+</head>
+<body>
+	<input type="password"  id="pwd">
+	<button>显示密码</button>
+
+	<script>
+		var pwd =document.getElementById('pwd');
+		var btn = document.querySelector('button');
+		var flag = 0;
+		btn.onclick = function() {
+			if(flag == 0) {
+				pwd.type = 'text';
+				btn.innerHTML = '隐藏密码';
+				flag = 1;
+			} else {
+				pwd.type = 'password';
+				btn.innerHTML= '显示密码';
+				flag = 0;
+			}
+		}
+	</script>
+</body>
+</html>

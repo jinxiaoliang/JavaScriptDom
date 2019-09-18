@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>click</button>
+	<input type="text" placeholder="hello js!!">
+	<script>
+		//type,value,disavled....
+		var btn = document.querySelector('button');
+		var input = document.querySelector('input');
+
+		btn.onclick = function(){
+			input.placeholder = 'clicked!!';
+			this.disabled = true;
+			input.style.outline = 'none';
+		}
+	</script>
+</body>
+</html>

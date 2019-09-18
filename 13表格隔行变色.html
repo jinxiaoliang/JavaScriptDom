@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table {
+			width: 300px;
+			height: 200px;
+			margin: 10px auto;
+			text-align: center;
+			border-collapse: collapse;
+		}
+		thead {
+			background-color: skyblue;
+			color: blue
+		}
+		tr {
+			border-bottom: 1px solid #000;
+			height: 30px;
+			cursor: pointer;
+		}
+		td {
+			padding: 0 30px
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>id</td>
+				<td>name</td>
+				<td>sex</td>
+				<td>grade</td>
+				<td>score</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>c01</td>
+				<td>zyx</td>
+				<td>girl</td>
+				<td>2017</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>c01</td>
+				<td>zyx</td>
+				<td>girl</td>
+				<td>2017</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>c01</td>
+				<td>zyx</td>
+				<td>girl</td>
+				<td>2017</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>c01</td>
+				<td>zyx</td>
+				<td>girl</td>
+				<td>2017</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>c01</td>
+				<td>zyx</td>
+				<td>girl</td>
+				<td>2017</td>
+				<td>100</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		var tr = document.querySelector('tbody').querySelectorAll('tr');
+
+		for(var i=0; i<tr.length; i++){
+			tr[i].onmouseover = function() {
+				this.style.backgroundColor = 'skyblue';
+			}
+			tr[i].onmouseout = function() {
+				this.style.backgroundColor = '';
+			}
+		}
+	</script>
+</body>
+</html>

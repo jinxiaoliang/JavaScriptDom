@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>事件委托与冒泡</li>
+        <li>事件委托与冒泡</li>
+        <li>事件委托与冒泡</li>
+        <li>事件委托与冒泡</li>
+        <li>事件委托与冒泡</li>
+    </ul>
+    <script>
+    var ul = document.querySelector('ul');
+
+    ul.addEventListener('click', function(e) {
+                alert("事件委托与冒泡！！");
+                // e.target.style.backgroundColor = 'pink';
+                // e.stopPropagation();
+                // e.cancelBubble = true;
+    </script>
+</body>
+
+</html>

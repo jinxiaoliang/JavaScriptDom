@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ocument</title>
+	<style>
+		.first {
+			width: 100px;
+			height: 100px;
+			margin: 10px auto;
+			background: red;
+			border: 1px solid #000;
+		}
+		.two {
+			width: 200px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="first">hello javascript</div>
+	<button>click</button>
+	<script>
+		var div = document.querySelector('.first');
+		var btn = document.querySelector('button');
+		btn.onclick = function() {
+			div.className = 'first two';
+		}
+	</script>
+</body>
+</html>

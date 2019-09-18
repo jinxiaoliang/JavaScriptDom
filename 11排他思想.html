@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    button {
+        width: 50px;
+        line-height: 30px;
+        color: #000;
+        margin-right: 5px;
+        outline: none;
+        border: none
+    }
+    </style>
+</head>
+
+<body>
+    <button>one</button>
+    <button>two</button>
+    <button>three</button>
+    <button>four</button>
+    <button>five</button>
+    <script>
+    var btn = document.querySelectorAll('button');
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].onmouseover = function() {
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].style.background = '';
+            }
+            this.style.backgroundColor = 'blue';
+        }
+        btn[i].onblur = function() {
+            this.style.backgroundColor = '';
+        }
+    }
+    </script>
+</body>
+
+</html>

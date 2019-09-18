@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input {
+			width: 300px;
+			line-height: 30px;
+			padding-left: 10px;
+			font-size: 14px;
+			border: 1px solid blue;
+			outline: none;
+			margin: 10px auto
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="javascript">
+
+	<script>
+		var btn = document.querySelector('input');
+
+		btn.onfocus = function() {
+			if(this.placeholder == 'javascript'){
+				this.placeholder = '';
+			}
+			this.style.fontWeight = 'bold';
+		}
+		btn.onblur = function() {
+			if(this.placeholder == '') {
+				this.placeholder = 'javascript';
+			}
+			this.style.fontWeight = 'normal';
+		}
+	</script>
+</body>
+</html>

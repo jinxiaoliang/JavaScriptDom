@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//1.onkeyup当键盘弹起时	触发事件
+		document.addEventListener('keyup',function(){
+			console.log('keyup');
+		});
+		//2.onkeydown当键盘按下时触发事件
+		document.addEventListener('keydown', function(){
+			console.log('keydown');
+		});
+		//3.onkeypress当键盘按下时触发事件（他不识别功能键）
+		document.addEventListener('keypress',function(){
+			console.log('keypress');
+		});
+		//4.三个事件执行顺序是down-press-up
+	</script>
+</body>
+</html>

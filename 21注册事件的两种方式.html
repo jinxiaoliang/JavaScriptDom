@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>传统注册事件</button>
+	<button>方法监听事件</button>
+	<script>
+		var btn =document.querySelectorAll('button');
+		//1.传统注册事件,唯一性，后面的方法会将前面的方法覆盖掉
+		btn[0].onclick = function() {
+			alert('传统方法注册事件one');
+		}
+		btn[0].onclick = function() {
+			alert('传统方法注册事件two');
+		}
+		//2.监听器注册方式，同一个事件可注测多次，后面的方法不会被前面的方法所覆盖
+		btn[1].addEventListener('click', function(){
+			alert("监听器注册方式1");
+		});
+		btn[1].addEventListener('click', function(){
+			alert("监听器注册方式2");
+		});
+	</script>
+</body>
+</html>

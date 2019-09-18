@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    table {
+        width: 400px;
+        border: 1px solid #000;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 10px auto
+    }
+
+    thead tr {
+        font-weight: 600
+    }
+
+    tr,
+    td {
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000
+    }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>课程</td>
+                <td>成绩</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+    var tbody = document.querySelector('tbody');
+
+    var datas = [{
+            name: 'zhangsan',
+            subject: 'javascript',
+            score: '100'
+
+        },
+        {
+            name: 'lisi',
+            subject: 'javascript',
+            score: '100'
+
+        },
+        {
+            name: 'wangermazi',
+            subject: 'javascript',
+            score: '100'
+
+        }
+    ]
+
+    for (var i = 0; i < datas.length; i++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        for (var k in datas[i]) {
+            var td = document.createElement('td');
+            td.innerHTML = datas[i][k];
+            tr.appendChild(td);
+        }
+        var td = document.createElement('td');
+        td.innerHTML = "<a href = 'javascript:;'>删除</a>"
+        tr.appendChild(td);
+    }
+    var as = document.querySelector('tbody').querySelectorAll('a');
+
+    for (var i = 0; i < as.length; i++) {
+        as[i].onclick = function() {
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    }
+    </script>
+</body>
+
+</html>

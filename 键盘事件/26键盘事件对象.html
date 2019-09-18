@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    document.addEventListener('keydown', function(e) {
+        console.log(e.keyCode);
+    });
+    document.addEventListener('keyup', function(e) {
+        console.log(e.keyCode);
+    });
+    //1.keypress区分大小写，keyup和keydown不区分大小写
+    document.addEventListener('keypress', function(e) {
+        console.log(e.keyCode);
+    });
+    </script>
+</body>
+
+</html>

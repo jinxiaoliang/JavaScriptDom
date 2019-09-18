@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input {
+			width: 300px;
+			line-height: 30px;
+			border: 1px solid #000;
+			padding-left: 10px;
+			font-size: 14px;
+		}
+		.span {
+			color: #000;
+			font-size: 12px;
+		}
+		.change {
+			color: red;
+		}
+		.change-o {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<input type="text"><span class="span">请输入6-15位密码</span>
+
+	<script>
+		var input = document.querySelector('input');
+		var span = document.querySelector('.span');
+
+		input.onblur = function() {
+			if(this.value.length < 6 ||this.value.length > 15){
+				span.className = 'span change';
+				span.innerHTML = '输入错误，请重新输入'
+			} else {
+				span.className = 'span change-o';
+				span.innerHTML = '输入正确'
+			}
+		}
+	</script>
+</body>
+</html>

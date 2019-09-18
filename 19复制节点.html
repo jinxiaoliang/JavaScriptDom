@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<script>
+		var ul = document.querySelector('ul');
+		//1.复制节点 node.cloneNode(true)
+		var lili = ul.children[0].cloneNode(true);
+		//2.添加节点  node.appendChild(node)或者node.insertBefore(name,node);
+		ul.insertBefore(lili,ul.children[1]);
+	</script>
+</body>
+</html>

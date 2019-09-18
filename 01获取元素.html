@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="time">2019-8-22</div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<script>
+		//1.通过id
+		var time = document.getElementById('time');
+		alert(time);
+		alert(typeof time);
+		//2.更好的获取元素对象
+		console.dir(time);
+		//3.通过标签名
+		var li = document.getElementsByTagName('li');
+		console.log(li.length);
+		//4.通过class
+		var li = document.getElementsByClassName('li');
+		//5.通过querySelector获取第一个元素
+		var li = querySelector('li');
+		//6.通过querySelectorAll获取所有元素
+		var li = querySelectorAll('li');
+		//7.获取body标签
+		var bo = document.body;
+		//8.获取html标签
+		var ht = document.documentElement;
+	</script>
+</body>
+</html>

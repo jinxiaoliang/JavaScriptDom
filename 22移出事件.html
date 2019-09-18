@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>1</button>
+	<button>2</button>
+	<button>3</button>
+
+	<script>
+		var btn = document.querySelectorAll('button');
+
+		//1.传统方式
+		btn[0].onclick = function() {
+			alert('传统方式！！');
+			this.onclick = null;
+		}
+		//2.监听方式
+		btn[1].addEventListener('click', fn);
+		function fn(){
+			alert('监听方式！！');
+			btn[1].removeEventListener('click', fn);
+		}
+	</script>
+</body>
+</html>

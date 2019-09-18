@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			width: 500px;
+			height: 200px;
+			margin: 10px auto
+		}
+		.top {
+			width: 500px;
+			height: 30px;
+			background: #ccc;
+			line-height: 30px;
+		}
+		.top ul li {
+			list-style: none;
+			float: left;
+			padding: 0 10px;
+			cursor: pointer;
+			font-size: 14px;	
+		}
+		.item {
+			display: none
+		}
+		.current {
+			background:red;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<ul>
+				<li>课程详情</li>
+				<li>课程评价</li>
+				<li>相关课程</li>
+				<li>截至时间</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="item" >课程详情模块</div>
+			<div class="item">课程评价模块</div>
+			<div class="item">相关课程模块</div>
+			<div class="item">截至时间模块</div>
+		</div>
+	</div>
+	<script> 
+		var ul = document.querySelector('.top').querySelectorAll('li');
+		var item = document.querySelector('.content').querySelectorAll('.item');
+		for(var i = 0; i < ul.length; i++){
+			ul[i].setAttribute('index', i);
+			ul[i].onclick = function() {
+				for(var i = 0;i < ul.length; i++){
+					ul[i].className = '';
+				}
+				this.className = 'current';
+
+				var index = this.getAttribute('index');
+				for(var i = 0; i < item.length; i++){
+					item[i].style.display = 'none';
+				}
+				item[index].style.display = 'block';
+			}
+		}
+	</script>
+</body>
+</html>

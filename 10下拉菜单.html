@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul {
+			list-style: none;
+			width: 500px;
+			line-height: 50px;
+			height: 50px;
+			background: #ccc;
+		}
+		li {
+			float: left;
+			position: relative;
+		}
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 0 10px;
+		}
+		a:hover {
+			background: #000;
+			color: #fff
+
+		}
+		#ul {
+			position: absolute;
+			background: none;
+			width: 119px;
+			display: none;
+			padding: 0
+		}
+		#ul li {
+			float: none;
+			text-align: center;
+		}
+		#ul li:hover {
+			background: #000;
+			color: #fff
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="">HTML/CSS</a></li>
+		<li><a href="">Browser Side</a>
+			<ul id="ul">
+				<li>php</li>
+				<li>http</li>
+				<li>tcp</li>
+				<li>utf</li>
+			</ul>
+		</li>
+		<li><a href="">Server Side</a></li>
+		<li><a href="">XML</a></li>
+	</ul>
+	<script>
+		var ul = document.querySelector('#ul');
+		var li = document.getElementsByTagName('li')[1];
+		li.onmouseover = function() {
+			ul.style.display = 'block';
+		}
+		li.onmouseout = function() {
+			ul.style.display = 'none';
+		}
+	</script>
+</body>
+</html>

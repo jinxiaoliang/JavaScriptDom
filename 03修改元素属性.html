@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			border: none;
+			outline: none;
+			width: 50px;
+			height: 20px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		img {
+			width: 100px;
+			height: 100px;
+			display: block
+		}
+	</style>
+</head>
+<body>
+	<button id="one">图片1</button>
+	<button id="two">图片2</button>
+	<img src="img/xm.jpg" alt="">
+	<script>
+		var img = document.getElementsByTagName('img')[0];
+		var img0ne = document.getElementById('one');
+		var imgTwo = document.getElementById('two');
+		img0ne.onmouseover = function() {
+			img.src = 'img/xm.jpg';
+		};
+		imgTwo.onmouseover = function() {
+			img.src = 'img/xm01.jpg';
+		};
+	</script>
+</body>
+</html>
